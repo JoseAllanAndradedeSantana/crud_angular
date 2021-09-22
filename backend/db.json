@@ -1,0 +1,36 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Iphone13",
+            "price": 15.000
+        },
+        {
+            "id": 2,
+            "name": "Iphone12",
+            "price": 13.000
+        },
+        {
+            "id": 3,
+            "name": "Iphone11",
+            "price": 10.000
+        }
+    ],
+    "account": [
+        {
+            "id": 1,
+            "name": "Luz",
+            "price": 125.00
+        },
+        {
+            "id": 2,
+            "name": "Condominio",
+            "price": 374.00
+        },
+        {
+            "id": 3,
+            "name": "Iptu",
+            "price": 124.00
+        }
+    ]
+}
