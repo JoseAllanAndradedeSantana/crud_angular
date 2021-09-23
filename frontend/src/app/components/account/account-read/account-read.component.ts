@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AccountReadComponent implements OnInit {
   
   accounts!: Account[]
+  displayedColumns = ['id','name','price']
 
   constructor(private accountService: AccountService) { }
 
