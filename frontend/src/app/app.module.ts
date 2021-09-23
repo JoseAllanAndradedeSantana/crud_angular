@@ -18,7 +18,15 @@ import { ForDirective } from './directives/for.directive';
 import { AccountCreateComponent } from './components/account/account-create/account-create.component';
 import { MatButtonModule} from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule} from "@angular/forms";
+import { MatFormFieldModule} from "@angular/material/form-field";
+import { MatInputModule} from "@angular/material/input";
+import { AccountReadComponent } from './components/account/account-read/account-read.component';
+import { AccountRead2Component } from './components/account/account-read2/account-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AccountCrudComponent,
     RedDirective,
     ForDirective,
-    AccountCreateComponent
+    AccountCreateComponent,
+    AccountReadComponent,
+    AccountRead2Component
   ],
   imports: [
     BrowserModule,
@@ -41,7 +51,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

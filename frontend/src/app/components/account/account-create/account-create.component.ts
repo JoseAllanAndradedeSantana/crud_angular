@@ -1,5 +1,7 @@
+import { Account } from './../account.model';
 import { AccountService } from './../account.service';
 import { Component, OnInit } from '@angular/core';
+import { Router} from "@angular/router";
 
 
 @Component({
@@ -9,14 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountCreateComponent implements OnInit {
 
-  constructor(private accountService: AccountService) { }
+  account: Account = {
+    name: '',
+    price: null
+  }
+
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
     
   }
 
   createAccount(): void{
-    this.accountService.showMessage("Operação executada com sucesso!!")
+    this.accountService.create(this.account).subscribe(() => {
+      this.accountService.showMessage("Operação executada com sucesso!!")
+      this.router.navigate(['/account'])
+    })
+    
+  }
+
+  cancel(): void{
+
+    this.router.navigate(['/account'])
+
   }
 
 }
